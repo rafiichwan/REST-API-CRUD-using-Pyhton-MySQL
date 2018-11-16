@@ -13,5 +13,3 @@ CREATE TABLE IF NOT EXISTS user_review (
     updated_at DATETIME ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 );
-
-select * from user_review;
