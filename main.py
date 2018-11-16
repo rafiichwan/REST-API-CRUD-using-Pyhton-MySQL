@@ -19,7 +19,7 @@ def create_query():
             cursor = connection.cursor()
             cursor.execute(sql, data)
             connection.commit()
-            resp = jsonify('Query added successfully!')
+            resp = jsonify('Data added successfully!')
             resp.status_code = 200
             return resp
         else:
@@ -66,7 +66,7 @@ def update_query():
             cursor = connection.cursor()
             cursor.execute(sql, data)
             connection.commit()
-            resp = jsonify('Query updated successfully!')
+            resp = jsonify('Data updated successfully!')
             resp.status_code = 200
             return resp
         else:
@@ -87,7 +87,7 @@ def delete_query(id):
         sql = 'DELETE FROM user_review WHERE id=%s'
         cursor.execute(sql, (id,))
         connection.commit()
-        resp = jsonify('Query deleted successfully!')
+        resp = jsonify('Data deleted successfully!')
         resp.status_code = 200
         return resp
     except Exception as e:
