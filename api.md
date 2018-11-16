@@ -1,71 +1,76 @@
-Simple CRUD operation
+**Simple CRUD operation**
+----
 Create, Read, Update, and Delete data from database.
 
-URL
+* **URL**
 To create: /create
 To read: /read
 To update: /update
 To delete: /delete/<id>
-Method:
+	
+* **Method:**
 
-GET | POST
+`GET` | `POST`
 
-URL Params
+* **URL Params**
 
 The id of data is required to delete the data row.
 Required:
-id=[integer]
+`id=[integer]`
 
-Data Params
+* **Data Params**
 
 To create data data params required are:
-order_id=[integer]
+`order_id=[integer]
 product_id=[integer]
 user_id=[integer]
 rating=[float] in range 1 to 5
-review=[string]
+review=[string]`
 
 
 To update data data params required are:
-id=[integer]
+`id=[integer]
 order_id=[integer]
 product_id=[integer]
 user_id=[integer]
 rating=[float] in range 1 to 5
-review=[string]
+review=[string]`
 
-Success Response:
+* **Success Response:**
 
-POST url/create
+**POST url/create**
 
-Code: 200 
-Content: 'Data added successfully!'
+  * **Code: 200** <br />
+    **Content:** `'Data added successfully!'`
 
-GET url/read
+**GET url/read**
 
-Code: 200 
-Content: 
+* **Code: 200** <br />
+  **Content:**
 {
-	  "id" : 1,
+    `"id" : 1,
     "order_id" : 12,
     "product_id" : 20,
     "user_id" : 1,
     "rating" : 5,
-    "review" : "The food is delicious!"
+    "review" : "The food is delicious!"`
 }
 
-POST url/update
-
-Code: 200 
-Content: 'Data updated successfully!'
+**POST url/update**
 
 
-GET url/delete/<id>
+  * **Code: 200** <br />
+    **Content:** `'Data updated successfully!'`
 
-Code: 200 
-Content: 'Data deleted successfully!'
-Error Response:
 
-Code: 404
-Content: { status : 404
-           message :"Not Found:" + request.url}
+**GET url/delete/<id>**
+
+
+  * **Code: 200** <br />
+    **Content:** `'Data deleted successfully!'`
+    
+* **Error Response:**
+
+* **Code: 404** <br />
+  **Content:** `{ status : 404
+           message :"Not Found:" + request.url}`
